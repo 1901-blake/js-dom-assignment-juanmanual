@@ -127,7 +127,13 @@ document.getElementsByName("skills")[0]
 function colorEventFactory() {
   let color = "";
   return (event) => {
-    color && alert("so you like "+event.target.value+" more than "+color);
+    let colorRadioButtons = document.getElementsByName("favoriteColor");
+    let newColor = event.target.value;
+
+    for (colorElement of colorRadioButtons) { 
+      colorElement && (colorElement.style["background-color"]=newColor) 
+    }
+    color && alert("so you like "+newColor+" more than "+color+"?");
     color = event.target.value;
   }
 }
