@@ -111,7 +111,6 @@ document.getElementById("num2")
 // When user selects a skill, create an alert with a message similar to:
 // 	"Are you sure CSS is one of your skills?"
 // NOTE: no alert should appear when user deselects a skill.
-document.getElementsByName("skills")[0].addEventListener();
 
 document.getElementsByName("skills")[0]
   .addEventListener("change", (event) => {
