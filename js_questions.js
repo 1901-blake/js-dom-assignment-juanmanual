@@ -150,6 +150,16 @@ for(rb of colorRadioButtons) {
 // 	Hide the name if shown.
 // 	Show the name if hidden.
 
+let empNames = document.getElementsByClassName("empName");
+
+for(empNameElement of empNames) {
+  let visible = true;
+  empNameElement.addEventListener("mouseover", (event) => {
+    visible = !visible;
+    event.target.style.opacity = visible?"100":"0";
+  })
+}
+
 // 10. Current Time
 // Regarding this element:
 // 	<h5 id="currentTime"></h5>
