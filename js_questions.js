@@ -179,7 +179,7 @@ setInterval( () => {
 document.getElementById("helloWorld")
   .addEventListener("click", (event) => {
     setTimeout( () => {
-      //got this random number gen from stack overflow
+      //got this random color gen from stack overflow
       event.target.style.color = '#'+Math.random().toString(16).slice(-3);
     }, 3000)
   })
