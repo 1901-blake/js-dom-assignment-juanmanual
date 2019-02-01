@@ -77,6 +77,9 @@ function getHobbies() {
 // Print the value of the attribute.
 // Print the element that has the attribute.
 function getCustomAttribute() {
+  for(element of document.querySelectorAll("*[data-customAttr]")) {
+    console.log(element); 
+    console.log(element.attributes["data-customAttr"].value)}
 
 }
 
@@ -188,6 +191,15 @@ document.getElementById("helloWorld")
 // Define function walkTheDOM(node, func)
 // This function should traverse every node in the DOM. Use recursion.
 // On each node, call func(node).
+function walkTheDOM(node, func) {
+  let unwalked = node.children;
+  //explore all the children
+  for (childNode of unwalked) {
+    func(childNode,func)
+  }
+  //then print the node
+  console.log(node);
+}
 
 
 // */
