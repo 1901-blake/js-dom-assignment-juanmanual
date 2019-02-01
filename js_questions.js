@@ -165,11 +165,24 @@ for(empNameElement of empNames) {
 // 	<h5 id="currentTime"></h5>
 // Show the current time in this element in this format: 9:05:23 AM
 // The time should be accurate to the second without having to reload the page.
+setInterval( () => {
+  document.getElementById("currentTime")
+  .innerText = new Date()
+  .toLocaleTimeString('en-US')
+  }, 100)
 
 // 11. Delay
 // Regarding this element:
 // 	<p id="helloWorld">Hello, World!</p>
 // Three seconds after a user clicks on this element, change the text to a random color.
+
+document.getElementById("helloWorld")
+  .addEventListener("click", (event) => {
+    setTimeout( () => {
+      //got this random number gen from stack overflow
+      event.target.style.color = '#'+Math.random().toString(16).slice(-3);
+    }, 3000)
+  })
 
 // 12. Walk the DOM
 // Define function walkTheDOM(node, func)
